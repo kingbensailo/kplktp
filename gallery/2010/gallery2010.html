@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery 2025 - KPL KTP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .modal-content-wrapper {
+            position: relative;
+            max-width: 80%;
+            max-height: 80vh;
+            text-align: center;
+        }
+
+        .modal-content {
+            max-width: 100%;
+            max-height: 70vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .caption {
+            color: #fff;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 16px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .prev-btn:hover, .next-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .prev-btn { left: 20px; }
+        .next-btn { right: 20px; }
+
+        .gallery-buttons-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container page-archive" id="top">
+        <div style="margin-bottom: 30px; display: flex; gap: 10px;">
+            <a href="./../../kum/2010.html" class="btn-year primary-btn">← Back to 2010</a>
+            <a href="../../index.html" class="btn-year primary-btn">Home</a>
+        </div>
+        
+        <h2 class="section-title">2010 Photo Gallery</h2>
+
+        <!-- Gallery Category Buttons -->
+        <div class="gallery-buttons-container">
+            <button onclick="openSlideshow('hnatlang')" class="btn-year primary-btn" style="padding: 12px 24px; font-size: 1.1rem; cursor: pointer;">📷 Branch Hnatlang</button>
+            <button onclick="openSlideshow('schedule')" class="btn-year primary-btn" style="padding: 12px 24px; font-size: 1.1rem; cursor: pointer;">📷 Branch Schedule</button>
+            <button onclick="openSlideshow('group')" class="btn-year primary-btn" style="padding: 12px 24px; font-size: 1.1rem; cursor: pointer;">📷 Group Activities</button>
+        </div>
+
+        
+    </div>
+
+    <!-- Slideshow Modal -->
+    <div id="slideshowModal" class="modal">
+        <span class="close-btn" onclick="closeSlideshow()">&times;</span>
+        <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="modal-content-wrapper">
+            <img id="modalImage" class="modal-content" src="" alt="Gallery Image">
+            <div id="modalCaption" class="caption"></div>
+        </div>
+        <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        // Data structure for each slideshow category
+        const galleryData = {
+            hnatlang: [
+                { src: 'hnatlang/5.jpg', caption: 'Branch Hnatlang - sgdsfg' },
+                { src: 'hnatlang/6.jpg', caption: 'vgsadfasdf' },
+                { src: 'hnatlang/2.png', caption: 'Branch Hnatlang - Building Construction' }
+            ],
+            schedule: [
+                { src: 'images/2026/schedule1.jpg', caption: 'Branch Schedule - Q1 Plan' },
+                { src: 'images/2026/schedule2.jpg', caption: 'Branch Schedule - Q2 Plan' }
+            ],
+            group: [
+                { src: 'images/2026/group1.jpg', caption: 'Group Activities - Fellowship Evening' },
+                { src: 'images/2026/group2.jpg', caption: 'Group Activities - Sports Meet' }
+            ]
+        };
+
+        let currentCategory = [];
+        let currentIndex = 0;
+
+        function openSlideshow(categoryKey) {
+            currentCategory = galleryData[categoryKey];
+            if (!currentCategory || currentCategory.length === 0) return;
+            
+            currentIndex = 0;
+            updateSlideshow();
+            document.getElementById('slideshowModal').style.display = 'flex';
+        }
+
+        function closeSlideshow() {
+            document.getElementById('slideshowModal').style.display = 'none';
+        }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex >= currentCategory.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = currentCategory.length - 1;
+            }
+            updateSlideshow();
+        }
+
+        function updateSlideshow() {
+            const imageObj = currentCategory[currentIndex];
+            document.getElementById('modalImage').src = imageObj.src;
+            document.getElementById('modalCaption').innerText = imageObj.caption;
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            const modal = document.getElementById('slideshowModal');
+            if (event.target === modal) {
+                closeSlideshow();
+            }
+        };
+    </script>
+</body>
+</html>

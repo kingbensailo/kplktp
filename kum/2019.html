@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPL KTP 2019</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../style.css">
+    <style>
+        .tabs-container {
+            margin-bottom: 30px;
+        }
+
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            background-color: #f1f5f9;
+            border: none;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #475569;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .tab-btn.active {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container page-archive" id="top">
+        <div style="margin-bottom: 30px; display: flex; gap: 10px;">
+            <a href="./../index.html" class="btn-year primary-btn">← Back to Home</a>
+            <a href="./../gallery/2019/gallery2019.html" class="btn-year primary-btn">Gallery</a>
+        </div>
+        
+        <h2 class="section-title">2019 Branch Office Bearers</h2>
+        
+        <div class="members-grid">
+            <div class="member-card"><img src="./../ob/uruata.jpg" alt="Photo"><p class="name">Pu C. Vanlalruatkima</p><p class="role">Leader</p></div>
+            <div class="member-card"><img src="./../ob/mafaka.jpg" alt="Photo"><p class="name">Tv RL. Lalfakmawia</p><p class="role">Assistant Leader</p></div>
+            <div class="member-card"><img src="./../ob/aldrin.jpg" alt="Photo"><p class="name">Tv Aldrin Lalrinfela</p><p class="role">Secretary</p></div>
+            <div class="member-card"><img src="./../ob/jimmy.jpg" alt="Photo"><p class="name">Pu Jimmy Lalnuntluanga</p><p class="role">Assistant Secretary</p></div>
+            <div class="member-card"><img src="./../ob/ramdina.jpg" alt="Photo"><p class="name">Pu B. Ramdinliana</p><p class="role">Treasurer</p></div>
+            <div class="member-card"><img src="./../ob/rti.jpg" alt="Photo"><p class="name">Nl Ramthianghlimi</p><p class="role">Finance Secretary</p></div>
+        </div>
+
+        <section class="group-section">
+            <h2 class="group-title">Branch Committee Members</h2>            
+            <div class="committee-list">
+                <ul class="modern-list">
+                    <li>1. Pu R. Lalremliana</li>
+                    <li>2. Pu Samuel Vanlalremruata</li>
+                    <li>3. Tv Kenny Lalmuankima</li>
+                    <li>4. Tv Lalremruata</li>
+                    <li>5. Tv Lalrinhlua (Terina)</li>
+                    <li>6. Tv Lalmakthanga Fanai</li>
+                    <li>7. Tv R. Lalrinsanga</li>
+                    <li>8. Tv Lalthanzama</li>
+                    <li>9. Tv Rambuatsaiha</li>
+                    <li>10. Nl Rosie Lalrinkimi</li>
+                    <li>11. Nl R. Lalruatkimi</li>
+                    <li>12. Nl R. Lalhlimpuii</li>
+                    <li>13. Nl Vanlalhumi</li>
+                    <li>14. Nl Lalrinchhani</li>
+                    <li>15. Nl Lallawmtluangi (Apuii)</li>
+                </ul>                                                  
+            </div>
+        </section>
+
+        <!-- Sub Committee Section with Tabs -->
+        <h2 class="section-title">Sub Committee Hrang Hrang Te</h2>
+
+        <div class="tabs-container" id="subcommittee-tabs">
+            <div class="tabs-nav" role="tablist">
+                <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="subtab-1">Programme</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="subtab-2">Decoration & Ushering</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="subtab-3">Information & Media</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="subtab-6">Ephatha Editorial</button>
+            </div>
+
+            <!-- Programme Sub Committee -->
+            <div id="subtab-1" class="tab-content active" role="tabpanel">
+                <section class="group-section programme-modal-section">
+                    <h3 class="group-title">Programme Sub Committee</h3>
+                    <div class="members-grid">    
+                        <div class="member-card"><img src="./../ob/mafaka.jpg" alt="Photo"><p class="name">Tv RL. Lalfakmawia</p><p class="role">Chairman</p></div>    
+                        <div class="member-card"><img src="./../ob/sangnoa.jpg" alt="Photo"><p class="name">Tv R. Lalrinsanga</p><p class="role">Secretary</p></div>    
+                        <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>
+                    <div class="committee-list hidden">
+                        <h4>Members Te:</h4>  
+                        <ul class="modern-list">
+                            <li>1. Nl R. Lalruatkimi</li>
+                            <li>2. Nl Vanlalhumi</li>
+                            <li>3. Nl Lallawmtluangi</li>
+                        </ul>
+                    </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+            <!-- Decoration & Ushering Sub Committee -->
+            <div id="subtab-2" class="tab-content" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Decoration & Ushering Sub Committee</h3>
+                    <div class="members-grid">    
+                        <div class="member-card"><img src="./../ob/remla.jpg" alt="Photo"><p class="name">Pu R. Lalremliana</p><p class="role">Chairman</p></div>    
+                        <div class="member-card"><img src="./../ob/samuel.jpg" alt="Photo"><p class="name">Pu Samuel Vanlalremruata</p><p class="role">Secretary</p></div>
+                        <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>    
+                    </div>
+                    <div class="committee-list hidden">
+                        <h4>Members Te:</h4>
+                        <ul class="modern-list">
+                            <li>1. Tv Rambuatsaiha</li>
+                            <li>2. Tv Malsawmkima (Kimkima)</li>
+                            <li>3. Nl Ramthianghlimi</li>
+                            <li>4. Nl R. Lalruatkimi</li>
+                            <li>5. Nl Lalrinchhani</li>
+                            <li>6. Nl R. Lalhlimpuii</li>
+                            <li>7. Nl Vanlalhumi</li>
+                            <li>8. Nl Lallawmtluangi</li>
+                            </li>9. Nl Malsawmtluangi Pachuau</li>
+                        </ul>    
+                    </div>
+                </section>
+            </div>
+
+            <!-- Information, Media & Documentation Sub Committee -->
+            <div id="subtab-3" class="tab-content" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Information & Media Sub Committee</h3>
+                    <div class="members-grid">    
+                        <div class="member-card"><img src="./../ob/maka.jpg" alt="Photo"><p class="name">Tv Lalmakthanga Fanai</p><p class="role">Chairman</p></div>    
+                        <div class="member-card"><img src="./../ob/tetea.jpg" alt="Photo"><p class="name">Pu Lalthanzama</p><p class="role">Secretary</p></div>
+                        <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>    
+                    </div>
+                    <div class="committee-list hidden">
+                        <h4>Members Te:</h4>
+                        <ul class="modern-list">
+                            <li>1. Tv Kenny Lalmuankima</li>
+                            <li>2. Tv Lalremruata</li>
+                            <li>3. Tv Mangkhawlala</li>
+                            <li>4. Tv Mangminluna</li>
+                            <li>5. Tv Lalhruaizela</li>
+                            <li>6. Nl Rosie Lalrinkimi</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Ephatha Editorial Board -->
+            <div id="subtab-6" class="tab-content" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Ephatha Editorial Board</h3>
+                    <div class="members-grid">
+                        <div class="member-card"><img src="./../ob/maka.jpg" alt="Photo"><p class="name">Tv Lalmakthanga Fanai</p><p class="role">Editor</p></div>
+                        <div class="member-card"><img src="./../ob/tetea.jpg" alt="Photo"><p class="name">Pu Lalthanzama</p><p class="role">Jt. Editor</p></div>
+                        <div class="member-card"><img src="./../ob/mklala.jpg" alt="Photo"><p class="name">Tv Mangkhawlala</p><p class="role">News Editor</p></div>
+                        <div class="member-card"><img src="./../ob/luna.jpg" alt="Photo"><p class="name">Tv Mangminluna</p><p class="role">News Editor</p></div>
+                        <div class="member-card"><img src="./../ob/hruaizela.jpg" alt="Photo"><p class="name">Tv Lalhruaizela</p><p class="role">News Editor</p></div>
+                        <div class="member-card"><img src="./../ob/urosie.jpg" alt="Photo"><p class="name">Nl Rosie Lalrinkimi</p><p class="role">Treasurer</p></div>
+                        <div class="member-card"><img src="./../ob/rema.jpg" alt="Photo"><p class="name">Tv Lalremruata</p><p class="role">Cir. Manager</p></div>
+                    </div>
+                    <div class="committee-list hidden">
+                        <ul class="modern-list">
+                            <li><strong>Editor:</strong> Tv Siamlalzawma</li>
+                            <li><strong>Jt. Editor:</strong> Tv Lalchhandama leh Tv Zoremtluanga</li>
+                            <li><strong>Treasurer:</strong> Nl Vanhmingthangi</li>
+                            <li><strong>Cir. Manager:</strong> Tv Emmanuel Huntharlawma</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Group Inthen Dan Section with Tabs -->
+        <h2 class="section-title">Group Inthen Dan</h2>
+        <div class="committee-list info-card">
+            <p>Kum 2019 hian group pathumah then a ni a. Branch Committee ten group Leader, Secretary leh Treasurer tur te ruat nghal a. Kohhran Representative Upa R. Thanbanglova'n a hnuai a mi ang hian group hming tur a sa.</p>
+        </div>
+
+        <div class="tabs-container" id="group-tabs">
+            <div class="tabs-nav" role="tablist">
+                <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="grouptab-1">Clement-a Group</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="grouptab-2">Polycarp-a Group</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="grouptab-3">Justin-a Group</button>
+            </div>
+
+            <!-- Paul-a Group -->
+            <div id="grouptab-1" class="tab-content active" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Clement-a Group</h3>
+                    <div class="members-grid">
+                        <div class="member-card"><img src="./../ob/samuel.jpg" alt="Photo"><p class="name">Pu Samuel Vanlalremruata</p><p class="role">Leader</p></div>
+                        <div class="member-card"><img src="./../ob/tea.jpg" alt="Photo"><p class="name">Pu Lalmalsawma</p><p class="role">Assistant Leader</p></div>
+                        <div class="member-card"><img src="./../ob/apuii.jpg" alt="Photo"><p class="name">Nl Lallawmtluangi</p><p class="role">Secretary</p></div>
+                        <div class="member-card"><img src="./../ob/luna.jpg" alt="Photo"><p class="name">Tv Mangminluna</p><p class="role">AssistantSecretary</p></div>
+                        <div class="member-card"><img src="./../ob/maka.jpg" alt="Photo"><p class="name">Tv Lalmakthanga Fanai</p><p class="role">Treasurer</p></div>
+                        <div class="member-card"><img src="./../ob/nutei.jpg" alt="Photo"><p class="name">Nl Thanghmingliani</p><p class="role">Finance Secretary</p></div>
+                    <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>
+                    </div>
+                    
+                    <div class="committee-list hidden">
+                        <ul class="modern-list">
+                            <li>1. Pu Ricky MS. Dawngzela</li>
+                            <li>2. Tv Lalngaihsaka (Vala)</li>
+                            <li>3. Tv Zoremsanga</li>
+                            <li>4. Tv Dominic Lalnunngila</li>
+                            <li>5. Tv Emmanuel Huntharlawma</li>
+                            <li>6. Tv Lalsawna</li>
+                            <li>7. Tv Lalrotluanga</li>
+                            <li>8. Nl Zonunsangi</li>
+                            <li>9. Nl Ngaihvungi</li>
+                            <li>10. Nl Lalremsiami</li>
+                            <li>11. Nl Lucy Lalnunthiangi</li>
+                            <li>12. Nl Rebecca Lalrindiki</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Jacob-a Group -->
+            <div id="grouptab-2" class="tab-content" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Polycarp-a Group</h3>
+                    <div class="members-grid">
+                        <div class="member-card"><img src="./../ob/terina.jpg" alt="Photo"><p class="name">Tv Lalrinhlua</p><p class="role">Leader</p></div>
+                        <div class="member-card"><img src="./../ob/lawmzuala.jpg" alt="Photo"><p class="name">Tv Lallawmzuala</p><p class="role">Assistant Leader</p></div>
+                        <div class="member-card"><img src="./../ob/ruattei.jpg" alt="Photo"><p class="name">Nl R. Lalruatkimi</p><p class="role">Secretary</p></div>
+                        <div class="member-card"><img src="./../ob/hruaizela.jpg" alt="Photo"><p class="name">Tv Lalhruaizela</p><p class="role">Assistant Secretary</p></div>
+                        <div class="member-card"><img src="./../ob/tetea.jpg" alt="Photo"><p class="name">Pu Lalthanzama</p><p class="role">Treasurer</p></div>
+                        <div class="member-card"><img src="./../ob/mami.jpg" alt="Photo"><p class="name">Nl Lalrinchhani</p><p class="role">Finance Secretary</p></div>
+                    <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>
+                    </div>
+                    
+                    <div class="committee-list hidden">
+                        <ul class="modern-list">
+                            <li>Group Minute bu ka hmu zo tawh lo</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Petera Group -->
+            <div id="grouptab-3" class="tab-content" role="tabpanel">
+                <section class="group-section">
+                    <h3 class="group-title">Justin-a Group</h3>
+                    <div class="members-grid">
+                        <div class="member-card"><img src="./../ob/rema.jpg" alt="Photo"><p class="name">Pu R. Lalremliana</p><p class="role">Leader</p></div>
+                        <div class="member-card"><img src="./../ob/hsanga.jpg" alt="Photo"><p class="name">Pu Lalhmangaihsanga</p><p class="role">Assistant Leader</p></div>
+                        <div class="member-card"><img src="./../ob/buangi.jpg" alt="Photo"><p class="name">Nl Vanlalhumi</p><p class="role">Secretary</p></div>
+                        <div class="member-card"><img src="./../ob/mklala.jpg" alt="Photo"><p class="name">Tv Mangkhawlala</p><p class="role">Assistant Secretary</p></div>
+                        <div class="member-card"><img src="./../ob/buata.jpg" alt="Photo"><p class="name">Tv Rambuatsaiha</p><p class="role">Treasurer</p></div>
+                        <div class="member-card"><img src="./../ob/florence.jpg" alt="Photo"><p class="name">Nl Florence Zoremsangi</p><p class="role">Finance Secretary</p></div>
+                    <div class="committee-summary" role="button" tabindex="0">
+                        <p><strong>Committee Members:</strong></p>
+                        <p class="modal-note">Hetah hian a en theih e</p>
+                    </div>
+                    </div>
+                    
+                    <div class="committee-list hidden">
+                        <ul class="modern-list">
+                            <li>Group Minute bu ka hmu zo tawh lo</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="group-section">
+            <h2 class="section-title">Archive Years</h2>
+            <div class="year-nav">
+                <a href="2026.html" class="btn-year">2026</a>
+                <a href="2025.html" class="btn-year">2025</a>
+                <a href="2024.html" class="btn-year">2024</a>
+                <a href="2023.html" class="btn-year">2023</a>
+                <a href="2022.html" class="btn-year">2022</a>
+                <a href="2021.html" class="btn-year">2021</a>
+                <a href="2020.html" class="btn-year">2020</a>
+                <a href="2018.html" class="btn-year">2018</a>
+                <a href="2017.html" class="btn-year">2017</a>
+                <a href="2016.html" class="btn-year">2016</a>
+                <a href="2014.html" class="btn-year">2014</a>
+                <a href="2013.html" class="btn-year">2013</a>
+                <a href="2012.html" class="btn-year">2012</a>
+                <a href="2011.html" class="btn-year">2011</a>
+                <a href="2010.html" class="btn-year">2010</a>
+            </div>
+        </section> 
+
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" onclick="scrollToTop(); return false;" class="btn-year primary-btn">↑ Back to Top</a>
+        </div>
+    </div>
+
+    <!-- UI Scripts -->
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Generic Tab Switcher Functionality
+            const setupTabContainer = (containerId) => {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                const tabBtns = container.querySelectorAll('.tab-btn');
+                const tabContents = container.querySelectorAll('.tab-content');
+
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetId = btn.getAttribute('aria-controls');
+
+                        tabBtns.forEach(b => {
+                            b.classList.remove('active');
+                            b.setAttribute('aria-selected', 'false');
+                        });
+                        tabContents.forEach(c => c.classList.remove('active'));
+
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-selected', 'true');
+                        const targetContent = container.querySelector(`#${targetId}`);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
+                    });
+                });
+            };
+
+            setupTabContainer('subcommittee-tabs');
+            setupTabContainer('group-tabs');
+
+            // Modal Functionality
+            const summaries = document.querySelectorAll('.committee-summary');
+            if (!summaries.length) return;
+
+            const modalOverlay = document.createElement('div');
+            modalOverlay.className = 'modal-overlay';
+            modalOverlay.id = 'committee-modal';
+            modalOverlay.setAttribute('aria-hidden', 'true');
+            modalOverlay.innerHTML = `
+                <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <div class="modal-body"></div>
+                </div>
+            `;
+            document.body.appendChild(modalOverlay);
+
+            const modalTitle = modalOverlay.querySelector('.modal-title');
+            const modalBody = modalOverlay.querySelector('.modal-body');
+            const closeButton = modalOverlay.querySelector('.modal-close');
+
+            const openModal = (title, content) => {
+                modalTitle.textContent = title;
+                modalBody.innerHTML = content;
+                modalOverlay.classList.add('active');
+                modalOverlay.setAttribute('aria-hidden', 'false');
+                closeButton.focus();
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                modalOverlay.classList.remove('active');
+                modalOverlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = ''; 
+            };
+
+            summaries.forEach(summary => {
+                const section = summary.closest('.group-section');
+                const title = section ? section.querySelector('.group-title')?.textContent.trim() : '';
+                const list = summary.nextElementSibling || section.querySelector('.committee-list');
+
+                const triggerModal = (e) => {
+                    e.preventDefault();
+                    if (list) openModal(title, list.innerHTML);
+                };
+
+                summary.addEventListener('click', triggerModal);
+                summary.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') triggerModal(e);
+                });
+            });
+
+            closeButton.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
